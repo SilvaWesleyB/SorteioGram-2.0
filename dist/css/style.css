@@ -1,0 +1,58 @@
+/* 
+    Created on : 16/08/2021, 14:23:06
+    Author     : SilvaWes
+*/
+
+/* #622BB6 -> Cor Roxa */
+.navbar{
+    background-color: #622BB6;
+    height: 3.5rem;
+}
+.btn-logo{
+    width: 150px;
+    height: 30px;
+}
+#btn-menu{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.dropdown-item:hover{
+    background-color: #622BB6;
+    color: white;
+    font-weight: bold;
+}
+.form-group{
+    margin: auto;
+}
+main > .container{
+    background-color: #ffffff;
+    margin: auto;
+}
+main{
+    background-color: #ffffff;
+}
+.tab-pane{
+    padding: 1rem;
+}
+.nav-link{
+    color: #622BB6;
+    font-weight: bold;
+}
+.nav-link:hover{
+    color: black;
+    font-weight: bold;
+}
+@media (max-width: 768px) { 
+    .banner{
+        content: url('../img/gsal_banner_320x100 (1).jpeg');
+    } 
+}
+.card-img-top{
+    width: 100%;
+    height: 180px;
+}
+#help {
+    padding-top: 50px;
+    margin-top: -50px;
+}

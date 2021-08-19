@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="h-100">
+    <head>
+        <!-- Metas -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="Sistema de Sorteio para empresa DLWEB">
+        <meta name="author" content="Wesley Benites da Silva">
+
+        <!-- Icon -->
+        <link rel="icon" href="./dist/img/icone.ico">
+
+        <!-- Titulo -->
+        <title>SorteioGram 2.0</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Meu CSS -->
+        <link href="./dist/css/style.css" rel="stylesheet">
+    </head>
+    <body class="bg-light d-flex flex-column h-100">
+        <!-- Header/Nav -->
+        <header>
+            <nav class="navbar d-flex navbar-expand-md fixed-top">
+                <a class="navbar-brand mr-auto" href="/">
+                    <img src="./dist/img/logo.png" alt="Logo Página" class="btn-logo">
+                </a>
+                <div class="mt-md-0 mr-1">
+                    <div class="dropdown">
+                        <img class="dropdown-toggle" id="btn-menu" src="./dist/img/bars-solid.svg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt="Menu">
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btn-menu">
+                            <a href="#help" class="dropdown-item" >Modo de Usar?</a>
+                            <a class="dropdown-item" href="https://www.instagram.com/wesley.benites_" target="_blank">Fale Conosco</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Header/Nav -->
+
+        <!-- Main  -->
+        <main role="main" class="mt-4">
+            <div class="container py-5">
+
+                <!-- Titulo  -->
+                <h2 class="text-center mb-3"> Selecione o tipo de Sorteio a ser realizado </h2>
+                <!-- Titulo  -->
+
+                <!-- Conteudo -->
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <!--Tabs-->
+                        <ul class="nav nav-tabs justify-content-center" id="Abas" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="num-tab" data-toggle="tab" href="#num" role="tab"
+                                   aria-controls="num" aria-selected="true">Números</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="name-tab" data-toggle="tab" href="#name" role="tab"
+                                   aria-controls="name" aria-selected="false">Nomes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" id="insta-tab" data-toggle="tab" href="#insta" role="tab" aria-controls="insta" aria-selected="false">Instagram</a>
+                            </li>
+                        </ul>
+                        <!--Tabs-->
+
+                        <!--Tab Content-->
+                        <div class="tab-content" id="Conteudos">
+                            <!--Números-->
+                            <div class="tab-pane fade show active" id="num" role="tabpanel" aria-labelledby="num-tab">
+                                <form name="numeros" class="form-sort">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-8">
+                                            <label for="number-resultado">Escolha a quantidade de Resultados: </label>
+                                            <input type="text" class="form-control" id="number-resultado" name="resultado" placeholder="1 ou 999">
+                                            <div class="invalid-feedback">
+                                                Este campo não pode ficar vazio!
+                                            </div>
+                                            <div class="valid-feedback">
+                                                Tudo certo!
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <span class="col-md-2"></span>
+                                        <div class="form-group col-md-4">
+                                            <label for="number-inicial">Número Inicial: </label>
+                                            <input type="text" class="form-control" id="number-inicial" name="inicial" placeholder="1">
+                                            <div class="invalid-feedback">
+                                                Este campo não pode ficar vazio!
+                                            </div>
+                                            <div class="valid-feedback">
+                                                Tudo certo!
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="number-final">Número Final: </label>
+                                            <input type="text" class="form-control" id="number-final" name="final" placeholder="999">
+                                            <div class="invalid-feedback">
+                                                Este campo não pode ficar vazio!
+                                            </div>
+                                            <div class="valid-feedback">
+                                                Tudo certo!
+                                            </div>
+                                        </div>
+                                        <span class="col-md-2"></span>
+                                    </div>
+                                    <div class="form-row mt-4">
+                                        <div class="form-group col-md-4 text-center">
+                                            <button class="btn btn-success" type="button" id="btn-num">Sortear</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!--Números-->
+
+                            <!--Nomes-->
+                            <div class="tab-pane fade" id="name" role="tabpanel" aria-labelledby="name-tab">
+                                <form name="nomes" class="form-sort">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-8">
+                                            <label for="name-resultado">Escolha a quantidade de Resultados: </label>
+                                            <input type="text" class="form-control" id="name-resultado" placeholder="1 ou 999">
+                                            <div class="invalid-feedback">
+                                                Este campo não pode ficar vazio!
+                                            </div>
+                                            <div class="valid-feedback">
+                                                Tudo certo!
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-8">
+                                            <label for="names-sorteio">Escreva os nomes separados por virgula <b>","</b> : </label>
+                                            <textarea class="form-control" id="names-sorteio" rows="3" placeholder="Exemplo: joão,maria,rafael..." ></textarea>
+                                            <div class="invalid-feedback">
+                                                Este campo não pode ficar vazio!
+                                            </div>
+                                            <div class="valid-feedback">
+                                                Tudo certo!
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row mt-4">
+                                        <div class="form-group col-md-4 text-center">
+                                            <button class="btn btn-success" type="button" id="btn-name">Sortear</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!--Nomes-->
+                        </div>
+                        <!--Tab Content-->
+                    </div>
+                </div>
+                <!-- Conteudo  -->
+
+                <div class="row" id="help">
+                    <div class="col-11 col-md-8 mt-2 text-center ml-auto mr-auto">
+                        <div class="card-group">
+                            <div class="card">
+                                <img class="card-img-top border border-danger" src="./dist/img/help01.png" alt="Imagem de capa do card">
+                                <div class="card-body">
+                                    <h5 class="card-title">1° Passo</h5>
+                                    <p class="card-text">Selecione qual tipo de sorteio deseja realizar. Atualmente possuimos 2 tipos, sorteio de números e sorteio de nomes.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Por: <a href="https://www.instagram.com/wesley.benites_" target="_blank">@Wesley.benites_</a></small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top border border-danger" src="./dist/img/help02.png" alt="Imagem de capa do card">
+                                <div class="card-body">
+                                    <h5 class="card-title">2° Passo</h5>
+                                    <p class="card-text">Preencha os campos para que o sistema realize os devidos calculos e gere o resultado do sorteio. Todos os campos são obrigatórios. Após preencher todos os campos, basta clicar em <b>"Sortear"</b></p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Por: <a href="https://www.instagram.com/wesley.benites_" target="_blank">@Wesley.benites_</a></small>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top border border-danger" src="./dist/img/help03.png" alt="Imagem de capa do card">
+                                <div class="card-body">
+                                    <h5 class="card-title">3° Passo</h5>
+                                    <p class="card-text">E por fim, após realizar os outros 2 passos, aparecerá na tela o resultado do sorteio, conforme os dados inseridos.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Por: <a href="https://www.instagram.com/wesley.benites_" target="_blank">@Wesley.benites_</a></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Propaganda  -->
+                <div class="row">
+                    <div class="col-11 col-md-8 mt-2 text-center ml-auto mr-auto">
+                        <a href="https://growsocial.com.br/" target="_blank" title="Como ganhar seguidores no Instagram usando o GrowSocial">
+                            <img src="./dist/img/gsal_banner_320x100.jpeg" class="rounded w-100 banner" alt="Baner Publicidade">
+                        </a>
+                    </div>
+                </div>
+                <!-- Propaganda  -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="resultados-sorteios" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="title-modal"> </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="result">
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="btn-finalizar" class="btn btn-success" data-dismiss="modal">Finalizar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+            </div>
+        </main>
+        <!--  Main -->
+
+        <!-- Footer -->      
+        <footer class="footer pt-4 border-top mt-auto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md text-center">
+                        <img src="./dist/img/icone.png" alt="Logo Página" width="40" height="40">
+                        <small class="d-block mb-3 text-muted">&copy; 2021 <a href="https://www.instagram.com/wesley.benites_" target="_blank">WBDS</a></small>
+                    </div>
+                    <div class="col-6 col-md text-center">
+                        <h5>Parceiros</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="https://growsocial.com.br/">GrowSocial</a></li>
+                            <li><a class="text-muted" href="https://linkna.bio/">Linkna.bio</a></li>
+                            <li><a class="text-muted" href="https://sorteiotok.com/">SorteioTok</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md text-center">
+                        <h5>Sobre</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Privacidade</a></li>
+                            <li><a class="text-muted" href="#">Termos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer -->
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="./dist/js/jquery-3.6.0.min.js"></script>
+
+        <!--  Popper, Bootstrap -->
+        <script src="./dist/js/popper.min.js"></script>
+        <script src="./dist/js/bootstrap.min.js"></script>
+
+        <!-- MASK -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery-mask-plugin@1.14.16/dist/jquery.mask.min.js"></script>
+
+        <!-- Meu JS -->
+        <script type="text/javascript" src="./dist/js/main.js"></script>
+    </body>
+</html>
